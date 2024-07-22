@@ -1,0 +1,114 @@
+<h2> <h1 style="color: rgb(35, 99, 118);">IPL Win Predictor</h1>
+
+
+    {%extends "layout.html"%} 
+    {%block content%} 
+    <form action="" method="post"> 
+        {{ form.hidden_tag()}} 
+        <br> 
+        <div> 
+            {{form.batting_team.label}} 
+            {{form.batting_team}} 
+            {%if form.batting_team.errors%} 
+                {%for error in form.batting_team.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.bowling_team.label}} 
+            {{form.bowling_team}} 
+            {%if form.bowling_team.errors%} 
+                {%for error in form.bowling_team.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.city.label}} 
+            {{form.city}} 
+            {%if form.city.errors%} 
+                {%for error in form.city.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.target_score.label}} 
+            {{form.target_score}} 
+            {%if form.target_score.errors%} 
+                {%for error in form.target_score.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.Current_Runs.label}} 
+            {{form.Current_Runs}} 
+            {%if form.Current_Runs.errors%} 
+                {%for error in form.Current_Runs.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.wickets_down.label}} 
+            {{form.wickets_down}} 
+            {%if form.wickets_down.errors%} 
+                {%for error in form.wickets_down.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.over.label}} 
+            {{form.over}} 
+            {%if form.over.errors%} 
+                {%for error in form.over.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            {{form.ball.label}} 
+            {{form.ball}} 
+            {%if form.ball.errors%} 
+                {%for error in form.ball.errors%} 
+                    {{error}} 
+                {%endfor%} 
+            {%endif%} 
+        </div> 
+        <br> 
+        <div> 
+            <h3>{{form.submit()}}</h3> 
+        </div> 
+        <br> 
+        <div> 
+            <h1 style="color:rgb(0, 13, 129)"> 
+                <i>{{output1}}</i> 
+            </h1> 
+            <h1 style="color:rgb(0, 183, 255)"> 
+                <i>{{output2}}</i> 
+            </h1> 
+        </div> 
+        <br> 
+        <div> 
+            <h1 style="color:rgb(212, 1, 1)"> 
+                <i>{{output}}</i> 
+            </h1> 
+        </div> 
+        <br> 
+        <div> 
+            <h3 style="color:grey"><i>Redirect to Home Page ??</i></h3>
+            <a href="{{url_for('home')}}" target="_parent"> Home</a> 
+        </div> 
+    </form> 
+    {%endblock content%}
+    
