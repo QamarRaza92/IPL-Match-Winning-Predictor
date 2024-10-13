@@ -32,7 +32,7 @@ def predict():
         city = form.city.data
         target_score = form.target_score.data
         Current_Runs = form.Current_Runs.data
-        wickets_down = form.wickets_down.data
+        wickets_down = form.wickets_down.data 
         over = form.over.data
         ball = form.ball.data
         Required_Runs = target_score - Current_Runs

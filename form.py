@@ -24,11 +24,11 @@ cities = ['Bangalore', 'Chandigarh', 'Delhi', 'Mumbai', 'Kolkata', 'Jaipur',
 class InputForm(FlaskForm):
        batting_team = SelectField(label="Batting Team",choices=teams,validators=[DataRequired()])
        bowling_team = SelectField(label="Bowling Team",choices=teams,validators=[DataRequired()])
-       city =         SelectField(label="Match City",choices=cities,validators=[DataRequired()])
+       city         = SelectField(label="Match City",choices=cities,validators=[DataRequired()])
        target_score = IntegerField(label="Target Score",validators=[DataRequired()])
        Current_Runs = IntegerField(label="Current Runs",validators=[DataRequired()])
        wickets_down = IntegerField(label="Wickets Fallen",validators=[DataRequired()])
-       over =         IntegerField(label="Overs",validators=[DataRequired()])
-       ball =         IntegerField(label="Balls",validators=[DataRequired()])
-       submit =       SubmitField('Predict Winning Probability')
+       over         = IntegerField(label="Overs",validators=[DataRequired()])
+       ball         = IntegerField(label="Balls",validators=[DataRequired()])
+       submit       = SubmitField('Predict Winning Probability')
 
